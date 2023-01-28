@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation - Easy Tutorials YouTube Channel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>
+                create account
+            </h1>
+        </div>
+        <form id="registrationForm">
+
+            <div class="input-group">
+                <label>UserName</label>
+                <!-- <input type="text" placeholder="Enter your username" required id="contact-name"> -->
+                <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()">
+
+                <span id="name-error">name</span>
+                <small id="icon-show-name"></small>
+
+            </div>
+
+            <div class="input-group">
+                <label>Phone No.</label>
+                <!-- <input type="tel" placeholder="123 456 7890" required id="contact-phone"> -->
+                <input type="tel" placeholder="123 456 7890" id="contact-phone" onkeyup="validatePhone()">
+                <span id="phone-error">phone</span>
+                <small id="icon-show-phone"></small>
+            </div>
+
+            <div class="input-group">
+                <label>Email Id</label>
+                <!-- <input type="email" placeholder="Enter Email" required id="contact-email"> -->
+                <input type="email" placeholder="Enter Email" id="contact-email" onkeyup="validateEmail()">
+
+                <span id="email-error">email</span>
+                <small id="icon-show-email"></small>
+            </div>
+
+            <div class="input-group">
+                <label>
+                    Password:
+                </label>
+                <input type="password" placeholder="Enter password" required id="password" onkeyup="validatePass()">
+                <span id="pass-error">
+                    **Please Fill the password
+                </span>
+                <small id="icon-show-pass"></small>
+            </div>
+
+            <div class="input-group">
+                <label>
+                    Confirm Password:
+                </label>
+                <input type="password" placeholder="ReEnter password" required id="conpassword" onkeyup="validateConPass()">
+                <!-- <input type="password" placeholder="ReEnter password" required id="conpassword"> -->
+                <span id="conpass-error">
+                    **Password didn't match
+                </span>
+                <small id="icon-show-repass"></small>
+            </div>
+
+
+            <button onclick="return validateForm()">Submit</button>
+            <span id="submit-error"></span>
+
+        </form>
+
+
+
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
